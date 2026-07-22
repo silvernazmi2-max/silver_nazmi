@@ -11,7 +11,7 @@
 body{
 font-family:tahoma,sans-serif;
 background:
-linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+linear-gradient(rgba(0,0,0,.80),rgba(0,0,0,.80)),
 url('logo.jpg');
 background-size:cover;
 background-position:center;
@@ -42,8 +42,8 @@ box-shadow:0 0 25px rgba(255,255,255,.25);
 }
 
 h1{
-font-size:42px;
 margin-top:15px;
+font-size:42px;
 }
 
 .subtitle{
@@ -81,6 +81,11 @@ padding:20px;
 border-radius:18px;
 backdrop-filter:blur(6px);
 border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
@@ -88,9 +93,11 @@ margin-bottom:10px;
 color:silver;
 }
 
-.weight{
-font-size:20px;
-margin:10px 0;
+.price{
+font-size:24px;
+font-weight:bold;
+margin:15px 0;
+color:#fff;
 }
 
 .btn{
@@ -101,7 +108,6 @@ color:#000;
 text-decoration:none;
 border-radius:10px;
 font-weight:bold;
-margin-top:10px;
 }
 
 .footer{
@@ -111,46 +117,15 @@ padding:25px;
 color:#ccc;
 }
 </style>
-
-<script>
-const pass = prompt("رمز ورود را وارد کنید");
-
-if(pass !== "nazmi1388n"){
-document.write(`
-<!DOCTYPE html>
-<html>
-<head>
-<title>دسترسی غیرمجاز</title>
-<style>
-body{
-background:#111;
-color:white;
-font-family:tahoma;
-text-align:center;
-padding-top:100px;
-}
-</style>
 </head>
-<body>
-<h1>⛔ دسترسی غیرمجاز</h1>
-<p>رمز ورود اشتباه است</p>
-</body>
-</html>
-`);
-throw new Error("Access Denied");
-}
-</script>
 
-</head>
 <body>
 
 <div class="container">
 
 <div class="header">
 <div class="logo"></div>
-
 <h1>گالری نقره نظمی</h1>
-
 <div class="subtitle">
 فروش تخصصی شمش و ساچمه نقره
 </div>
@@ -161,19 +136,15 @@ throw new Error("Access Denied");
 <div class="box">
 <h2>📞 تماس</h2>
 <p>09226619434</p>
-<a class="btn" href="tel:09226619434">تماس مستقیم</a>
 </div>
 
 <div class="box">
 <h2>📷 اینستاگرام</h2>
 <p>@silver_nazmi</p>
-<a class="btn" href="https://instagram.com/silver_nazmi" target="_blank">
-ورود به اینستاگرام
-</a>
 </div>
 
 <div class="box">
-<h2>💰 قیمت</h2>
+<h2>💰 قیمت‌ها</h2>
 <p>برای استعلام قیمت روز تماس بگیرید</p>
 </div>
 
@@ -187,50 +158,50 @@ throw new Error("Access Denied");
 
 <div class="card">
 <h3>ساچمه ایرانی ۹۹۰</h3>
-<div class="weight">۱ گرم</div>
+<div class="price">۱ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>ساچمه ۹۹۹٫۹</h3>
-<div class="weight">۱ گرم</div>
+<div class="price">۱ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>شمش ۹۹۹٫۹</h3>
-<div class="weight">۲۵۰ گرم</div>
+<div class="price">۲۵۰ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>شمش ۹۹۹٫۹</h3>
-<div class="weight">۵۰۰ گرم</div>
+<div class="price">۵۰۰ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>شمش ۹۹۹٫۹</h3>
-<div class="weight">۱۰۰۰ گرم</div>
+<div class="price">۱۰۰۰ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>نقره ۹۲۵</h3>
-<div class="weight">۱ گرم</div>
+<div class="price">۱ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 <div class="card">
 <h3>متفرقه</h3>
-<div class="weight">۱ گرم</div>
+<div class="price">۱ گرم</div>
 <a class="btn" href="tel:09226619434">استعلام قیمت</a>
 </div>
 
 </div>
 
 <div class="footer">
-© گالری نقره نظمی
+© گالری نقره نظمی | Nazmi Silver Gallery
 </div>
 
 </div>
