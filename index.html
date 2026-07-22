@@ -3,149 +3,605 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>گالری نقره نظمی</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
 box-sizing:border-box;
 font-family:tahoma;
 }
 
 body{
-background:#111;
-color:white;
-text-align:center;
+margin:0;
+background:
+linear-gradient(
+rgba(255,255,255,.85),
+rgba(255,255,255,.85)
+),
+url("silver-bar.jpg");
+
+background-size:cover;
+background-attachment:fixed;
+
+color:#333;
 }
+
 
 .header{
-background:linear-gradient(135deg,#1f1f1f,#2f2f2f);
+
+text-align:center;
 padding:40px 20px;
+
 }
+
 
 .logo{
+
 width:120px;
 height:120px;
-border-radius:50%;
-border:3px solid silver;
 margin:auto;
+
+border-radius:50%;
+
+background:#eee;
+
+border:3px solid #aaa;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 font-size:40px;
+
 font-weight:bold;
+
+color:#555;
+
 }
+
 
 h1{
+
 margin-top:15px;
-font-size:30px;
+
+color:#555;
+
 }
+
 
 .subtitle{
-color:#ccc;
-margin-top:10px;
+
+color:#777;
+
 }
+
 
 .container{
+
+max-width:900px;
+
+margin:auto;
+
 padding:20px;
+
 }
+
+
 
 .card{
-background:#1e1e1e;
-padding:18px;
-margin:12px 0;
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(8px);
+
+border-radius:20px;
+
+padding:20px;
+
+margin:20px 0;
+
+box-shadow:0 5px 20px #aaa;
+
+}
+
+
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.product img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
 border-radius:15px;
-box-shadow:0 0 10px rgba(255,255,255,.08);
+
 }
 
-.btn{
-display:block;
-background:silver;
-color:black;
+
+
+button{
+
+width:100%;
+
 padding:15px;
+
+border:0;
+
 border-radius:12px;
-text-decoration:none;
+
+background:#b8b8b8;
+
+color:#222;
+
 font-weight:bold;
+
+cursor:pointer;
+
 margin-top:10px;
+
 }
 
-.btn:hover{
-opacity:.9;
+
+
+button:hover{
+
+background:#999;
+
 }
+
+
+
+input,textarea{
+
+width:100%;
+
+padding:14px;
+
+margin:8px 0;
+
+border-radius:12px;
+
+border:1px solid #ccc;
+
+}
+
+
+
+.cart-item{
+
+display:flex;
+
+justify-content:space-between;
+
+background:#eee;
+
+padding:10px;
+
+margin:8px;
+
+border-radius:10px;
+
+}
+
+
 
 .price{
+
 font-size:22px;
+
 font-weight:bold;
-color:#7fffd4;
+
+color:#777;
+
 }
 
-.footer{
-margin-top:30px;
+
+
+footer{
+
+text-align:center;
+
 padding:20px;
-color:#aaa;
-font-size:14px;
+
+color:#777;
+
 }
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
+
 <div class="header">
 
-<div class="logo">SN</div>
+<div class="logo">
+SN
+</div>
 
-<h1>گالری نقره نظمی</h1>
+<h1>
+گالری نقره نظمی
+</h1>
 
-<div class="subtitle">
+<p class="subtitle">
 فروش انواع زیورآلات و نقره
-</div>
+</p>
 
 </div>
+
+
+
 
 <div class="container">
 
+
 <div class="card">
+
 📞 تماس مستقیم
+
 <br><br>
-<a class="btn" href="tel:09226619434">
+
+<a href="tel:09226619434">
+
+<button>
 09226619434
+</button>
+
 </a>
+
 </div>
 
-<div class="card">
-📷 اینستاگرام
-<br><br>
-<a class="btn" target="_blank"
-href="https://instagram.com/silver_nazmi">
-@silver_nazmi
-</a>
-</div>
+
+
+
 
 <div class="card">
-💰 قیمت روز نقره
-<br><br>
-<a class="btn" target="_blank"
-href="https://nogreh.com/price-list/">
-مشاهده قیمت لحظه‌ای
-</a>
+
+<h2>
+محصولات
+</h2>
+
+
+<div class="products">
+
+
+
+<div class="product">
+
+<img src="watch.jpg">
+
+<h3>
+ساعت نقره
+</h3>
+
+<p>
+وزن: ... گرم
+<br>
+آبکاری رادیوم آلمان
+<br>
+مناسب استفاده روزمره و رسمی
+</p>
+
+<button onclick="addCart('ساعت نقره',5000000)">
+افزودن به سبد
+</button>
+
 </div>
 
+
+
+
+
+<div class="product">
+
+<img src="ring.jpg">
+
+<h3>
+انگشتر نقره
+</h3>
+
+<p>
+طرح خاص و شیک
+</p>
+
+
+<button onclick="addCart('انگشتر نقره',2000000)">
+افزودن به سبد
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="product">
+
+<img src="bar.jpg">
+
+<h3>
+شمش نقره
+</h3>
+
+<p>
+نقره با کیفیت بالا
+</p>
+
+
+<button onclick="addCart('شمش نقره',10000000)">
+افزودن به سبد
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
 <div class="card">
+
+
+<h2>
+🛒 سبد خرید
+</h2>
+
+
+<div id="cart">
+
+سبد خالی است
+
+</div>
+
+
+<h3 class="price">
+
+جمع:
+<span id="total">
+0
+</span>
+
+تومان
+
+</h3>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+ثبت سفارش
+</h2>
+
+
+<input id="name" placeholder="نام مشتری">
+
+
+<input id="phone" placeholder="شماره تماس">
+
+
+<textarea id="address" placeholder="آدرس کامل"></textarea>
+
+
+<textarea id="note" placeholder="توضیحات سفارش"></textarea>
+
+
+
+<button onclick="sendOrder()">
+
+ثبت سفارش
+
+</button>
+
+
+
+</div>
+
+
+
+<div class="card">
+
+⭐ کیفیت بالا  
+<br>
+⭐ قیمت مناسب  
+<br>
 🚚 ارسال به سراسر ایران
-</div>
-
-<div class="card">
-⭐ گالری نقره نظمی
-<br><br>
-کیفیت بالا • قیمت مناسب • ارسال سریع
-</div>
 
 </div>
 
-<div class="footer">
+
+
+</div>
+
+
+
+<footer>
+
 © Silver Nazmi
+
+</footer>
+
+
+
+
+<script>
+
+
+let cart=[];
+
+
+function addCart(name,price){
+
+cart.push({
+
+name:name,
+
+price:price
+
+});
+
+
+showCart();
+
+}
+
+
+
+
+
+function removeCart(index){
+
+cart.splice(index,1);
+
+showCart();
+
+}
+
+
+
+
+function showCart(){
+
+
+let box=document.getElementById("cart");
+
+let total=0;
+
+
+if(cart.length==0){
+
+box.innerHTML="سبد خالی است";
+
+document.getElementById("total").innerHTML=0;
+
+return;
+
+}
+
+
+
+box.innerHTML="";
+
+
+
+cart.forEach((item,index)=>{
+
+
+total+=item.price;
+
+
+box.innerHTML+=`
+
+<div class="cart-item">
+
+${item.name}
+
+<button onclick="removeCart(${index})">
+حذف
+</button>
+
 </div>
+
+
+`;
+
+});
+
+
+
+document.getElementById("total").innerHTML=
+total.toLocaleString();
+
+
+
+}
+
+
+
+
+function sendOrder(){
+
+
+let text=`
+
+🛒 سفارش جدید گالری نقره نظمی
+
+
+نام:
+${name.value}
+
+
+شماره:
+${phone.value}
+
+
+آدرس:
+${address.value}
+
+
+محصولات:
+${cart.map(x=>x.name).join("\n")}
+
+
+مبلغ:
+${document.getElementById("total").innerHTML}
+
+`;
+
+
+alert("سفارش ثبت شد");
+
+
+/*
+
+اتصال تلگرام اینجا اضافه می‌شود
+
+*/
+
+
+
+}
+
+
+
+</script>
+
 
 </body>
 </html>
